@@ -25,5 +25,3 @@ serves which customer.
 
 ### Installation
 XAMPP (a local webserver) may be required, using Apache and MySQL. Internet connection is also needed for getting the Tailwind framework.
-
-Install the dependencies and devDependencies and start the server.
