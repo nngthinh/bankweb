@@ -1,5 +1,6 @@
 # bankweb
 Database System 201 - Assignment 2
+[![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
 
 # Introductions
 The EXAMPLE BANK web is a simple web page that simulated some mandatory pages for users and admins. The bank web running with a front-end consisted of basic elements: HTML, CSS, and Javascript, while the server-side based on PHP and SQL. The framework used for the front-end is Tailwind.
