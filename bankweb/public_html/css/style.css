@@ -1,0 +1,188 @@
+/* Sinle pae application */
+.page,
+.hide {
+  display: none;
+}
+
+.page.active {
+  display: block;
+}
+
+.logo {
+  display: block;
+  color: white;
+  font-weight: bold;
+}
+
+/* Table */
+
+.tablebox {
+  max-height: 20rem;
+  overflow-y: auto;
+}
+
+.chose {
+  --tw-bg-opacity: 1;
+  background-color: rgba(5, 150, 105, var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgba(255, 255, 255, var(--tw-text-opacity));
+}
+
+/* Check radio */
+.radioinputcon {
+  display: block;
+  position: relative;
+  padding-left: 2rem;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 1.5rem;
+  width: 1.5rem;
+  border-radius: 100%;
+  background-color: #eee;
+}
+
+.radioinputcon input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.radioinputcon:hover input ~ .checkmark {
+  /* On mouse-over, add a grey background color */
+  background-color: #ccc;
+}
+
+.radioinputcon input:checked ~ .checkmark {
+  /* When the checkbox is checked, add a blue background */
+  background-color: #6f7eff;
+}
+
+.radioinputcon input:checked ~ .checkmark:after {
+  /* Show the checkmark when checked */
+  display: block;
+}
+
+.checkmark:after {
+  /* Create the checkmark/indicator (hidden when not checked) */
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.radioinputcon .checkmark:after {
+  /* Style the checkmark/indicator */
+  top: 0.5rem;
+  left: 0.5rem;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background: white;
+}
+
+/* Modal */
+
+#modal {
+  font-size: 16px;
+}
+
+#modal-background-hider {
+  display: block;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: #6c7bff;
+  opacity: 0.5;
+  z-index: 98;
+}
+
+#modal-box {
+  position: fixed;
+  width: 500px;
+  left: calc(50vw - 250px);
+  bottom: calc(50vh - 250px);
+  z-index: 99;
+  animation-name: fadeUp;
+  animation-duration: 0.4s;
+  border-radius: 25px 25px 25px 25px;
+}
+
+#modal-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 1rem;
+  height: 50px;
+  background-color: #ffffff;
+  font-weight: bold;
+  color: #333333;
+  border-radius: 25px 25px 0px 0px;
+}
+
+#modal-body {
+  background-color: #ffffff;
+  min-height: 90px;
+  padding: 2rem;
+  overflow-y: auto;
+}
+
+#modal-footer {
+  display: flex;
+  flex-direction: row;
+  height: 50px;
+  background-color: #ffffff;
+  border-radius: 0px 0px 25px 25px;
+}
+
+#modal-body::after,
+#modal-footer:after {
+  display: table;
+  content: " ";
+  clear: both;
+}
+
+#modal a {
+  text-decoration: none;
+}
+
+#modal .btn-modal {
+  float: left;
+  height: 100%;
+  width: 100%;
+  border-radius: 0px 0px 25px 25px;
+}
+
+#modal .btn-modal-left {
+  float: left;
+  height: 100%;
+  width: 50%;
+  border-radius: 0px 0px 0px 25px;
+}
+
+#modal .btn-modal-right {
+  float: left;
+  height: 100%;
+  width: 50%;
+  border-radius: 0px 0px 25px 0px;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
